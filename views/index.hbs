@@ -1,0 +1,20 @@
+<div class="glass-card">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <h2><i class="fa-solid fa-list-check" style="color: #28a745;"></i> My Todos</h2>
+    </div>
+
+    {{#if user}}
+    <form id="addTodoForm" style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+        <input type="text" name="content" placeholder="What needs to be done?" required style="margin-bottom: 0;">
+        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Add</button>
+    </form>
+    {{else}}
+    <p style="text-align: center; color: #999; margin-bottom: 2rem;">
+        <i class="fa-solid fa-circle-info"></i> Please <a href="/login">login</a> to manage your todos. Guests can only view.
+    </p>
+    {{/if}}
+
+    <ul id="todoList" class="todo-list">
+        <!-- Todos will be loaded dynamically -->
+    </ul>
+</div>

@@ -1,0 +1,28 @@
+<div class="glass-card">
+    <h2><i class="fa-solid fa-user-shield" style="color: #28a745;"></i> Create New User</h2>
+    
+    <form id="adminForm">
+        <div class="form-group">
+            <label for="username"><i class="fa-solid fa-user"></i> Username</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password"><i class="fa-solid fa-lock"></i> Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+            <label for="role"><i class="fa-solid fa-user-tag"></i> Role</label>
+            <select id="role" name="role">
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="expireMinutes"><i class="fa-solid fa-clock"></i> Expire After (Minutes) - Optional</label>
+            <input type="number" id="expireMinutes" name="expireMinutes" min="1" placeholder="Leave empty for no expiry">
+        </div>
+        <button type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-user-plus"></i> Create User
+        </button>
+    </form>
+</div>
